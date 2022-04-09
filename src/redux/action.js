@@ -200,13 +200,17 @@ export const updateUserFun = (
 export const deleteUserFun = (id, fn) => {
   return dispatch => {
     dispatch({type: DELETEUSERREQUEST});
-    var raw = `{\n	"user_id":"${id}"}`;
+    var raw = `{\n	"user_id":"${id}"\n}`;
 
     axios
       .delete(
         `https://3-upstesting.com/machine_test/index.php/web_api/Users/remove_user`,
-        {data: raw},
-        {headers: {'Content-Type': 'text/plain'}},
+        {
+          headers: {
+            'Content-Type': 'text/plain',
+          },
+          data: raw,
+        },
       )
       .then(res => {
         console.log('DELETE USER Success Response', res);
@@ -221,9 +225,9 @@ export const deleteUserFun = (id, fn) => {
       })
       .catch(e => {
         console.log('Error Response', e, e.response);
-      })
-      .finally(() => {
-        dispatch({type: DELETEUSERFAILURE});
+        Toast.show(e?.response?.data?.message, Toast.SHORT, [
+          'RCTModalHostViewController',
+        ]);
       });
   };
 };
