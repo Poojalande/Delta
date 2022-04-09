@@ -1,4 +1,10 @@
-import {View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import React, {useState} from 'react';
 import {Container} from '../../components/container';
 import {updateUserFun} from '../../redux/action';
@@ -12,6 +18,7 @@ const index = ({route, navigation}) => {
   const [username, setUsername] = useState(route?.params?.data?.user_email);
   const [password, setPassword] = useState(route?.params?.data?.user_pwd);
   const [mobileno, setMobileno] = useState(route?.params?.data?.user_phone_no);
+  const loading = useSelector(state => state.state.loading);
 
   const [gender, setGender] = useState(route?.params?.data?.user_gender);
 
@@ -25,166 +32,168 @@ const index = ({route, navigation}) => {
 
   return (
     <Container
-      //   loading={loading}
+      loading={loading}
       style={{
         flex: 1,
         backgroundColor: '#dddddd',
         paddingHorizontal: 10,
       }}>
-      <View
-        style={{
-          marginVertical: 10,
-          marginTop: 30,
-          marginHorizontal: 20,
-        }}>
+      <ScrollView showsVerticalScrollIndicator={false} bounces={false}>
         <View
           style={{
-            borderBottomWidth: 2,
-            borderBottomColor: 'black',
-            marginVertical: 30,
-            marginTop: 15,
-            paddingBottom: 5,
+            marginVertical: 10,
+            marginTop: 30,
+            marginHorizontal: 20,
           }}>
-          <TextInput
-            value={id}
-            onChangeText={val => setId(val)}
+          <View
             style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="Your Id"
-            placeholderTextColor={'black'}
-          />
-        </View>
-
-        <View
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: 'black',
-            marginVertical: 30,
-            marginTop: 15,
-            paddingBottom: 5,
-          }}>
-          <TextInput
-            value={name}
-            onChangeText={val => setName(val)}
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="Your Name"
-            placeholderTextColor={'black'}
-          />
-        </View>
-
-        <View
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: 'black',
-            marginVertical: 30,
-            marginTop: 15,
-            paddingBottom: 5,
-          }}>
-          <TextInput
-            value={username}
-            onChangeText={val => setUsername(val)}
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="Email"
-            placeholderTextColor={'black'}
-          />
-        </View>
-        <View
-          style={{
-            borderBottomWidth: 2,
-            marginVertical: 30,
-            borderBottomColor: 'black',
-            paddingBottom: 5,
-            marginTop: 15,
-          }}>
-          <TextInput
-            value={password}
-            onChangeText={val => setPassword(val)}
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="Password"
-            placeholderTextColor={'black'}
-          />
-        </View>
-
-        <View
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: 'black',
-            marginVertical: 30,
-            marginTop: 15,
-            paddingBottom: 5,
-          }}>
-          <TextInput
-            value={mobileno}
-            onChangeText={val => setMobileno(val)}
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="mobile number"
-            placeholderTextColor={'black'}
-          />
-        </View>
-        <View
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: 'black',
-            marginVertical: 30,
-            marginTop: 15,
-            paddingBottom: 5,
-          }}>
-          <TextInput
-            value={gender}
-            onChangeText={val => setGender(val)}
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontFamily: 'ZillaSlab-Medium',
-            }}
-            placeholder="your gender"
-            placeholderTextColor={'black'}
-          />
-        </View>
-
-        <TouchableOpacity
-          onPress={() => {
-            updateUser();
-            // navigation.navigate('Login');
-          }}
-          style={{
-            backgroundColor: '#FDEFEF',
-            alignItems: 'center',
-            borderRadius: 50,
-            marginVertical: 30,
-            paddingVertical: 10,
-            width: '50%',
-          }}>
-          <Text
-            style={{
-              color: 'black',
-              fontSize: 18,
-              fontWeight: 'bold',
-              fontFamily: 'ZillaSlab-Bold',
+              borderBottomWidth: 2,
+              borderBottomColor: 'black',
+              marginVertical: 30,
+              marginTop: 15,
+              paddingBottom: 5,
             }}>
-            UPDATE
-          </Text>
-        </TouchableOpacity>
-      </View>
+            <TextInput
+              value={id}
+              onChangeText={val => setId(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="Your Id"
+              placeholderTextColor={'black'}
+            />
+          </View>
+
+          <View
+            style={{
+              borderBottomWidth: 2,
+              borderBottomColor: 'black',
+              marginVertical: 30,
+              marginTop: 15,
+              paddingBottom: 5,
+            }}>
+            <TextInput
+              value={name}
+              onChangeText={val => setName(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="Your Name"
+              placeholderTextColor={'black'}
+            />
+          </View>
+
+          <View
+            style={{
+              borderBottomWidth: 2,
+              borderBottomColor: 'black',
+              marginVertical: 30,
+              marginTop: 15,
+              paddingBottom: 5,
+            }}>
+            <TextInput
+              value={username}
+              onChangeText={val => setUsername(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="Email"
+              placeholderTextColor={'black'}
+            />
+          </View>
+          <View
+            style={{
+              borderBottomWidth: 2,
+              marginVertical: 30,
+              borderBottomColor: 'black',
+              paddingBottom: 5,
+              marginTop: 15,
+            }}>
+            <TextInput
+              value={password}
+              onChangeText={val => setPassword(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="Password"
+              placeholderTextColor={'black'}
+            />
+          </View>
+
+          <View
+            style={{
+              borderBottomWidth: 2,
+              borderBottomColor: 'black',
+              marginVertical: 30,
+              marginTop: 15,
+              paddingBottom: 5,
+            }}>
+            <TextInput
+              value={mobileno}
+              onChangeText={val => setMobileno(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="mobile number"
+              placeholderTextColor={'black'}
+            />
+          </View>
+          <View
+            style={{
+              borderBottomWidth: 2,
+              borderBottomColor: 'black',
+              marginVertical: 30,
+              marginTop: 15,
+              paddingBottom: 5,
+            }}>
+            <TextInput
+              value={gender}
+              onChangeText={val => setGender(val)}
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontFamily: 'ZillaSlab-Medium',
+              }}
+              placeholder="your gender"
+              placeholderTextColor={'black'}
+            />
+          </View>
+
+          <TouchableOpacity
+            onPress={() => {
+              updateUser();
+              // navigation.navigate('Login');
+            }}
+            style={{
+              backgroundColor: '#FDEFEF',
+              alignItems: 'center',
+              borderRadius: 50,
+              marginVertical: 30,
+              paddingVertical: 10,
+              width: '50%',
+            }}>
+            <Text
+              style={{
+                color: 'black',
+                fontSize: 18,
+                fontWeight: 'bold',
+                fontFamily: 'ZillaSlab-Bold',
+              }}>
+              UPDATE
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </Container>
   );
 };

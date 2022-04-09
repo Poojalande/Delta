@@ -50,7 +50,14 @@ export const loginSuccessFun = (username, password) => {
   };
 };
 
-export const registerSuccessFun = (name, email, password, moNomber, gender) => {
+export const registerSuccessFun = (
+  name,
+  email,
+  password,
+  moNomber,
+  gender,
+  fn,
+) => {
   return dispatch => {
     dispatch({type: REGISTERREQUEST});
 
@@ -71,9 +78,14 @@ export const registerSuccessFun = (name, email, password, moNomber, gender) => {
       'https://3-upstesting.com/machine_test/index.php/web_api/Users/Register',
       requestOptions,
     )
-      .then(response => {
-        response.json();
-        dispatch({type: REGISTERSUCCESS, payload: res});
+      .then(async response => {
+        const res = await response.json();
+        console.log(' Register res', res);
+        if (res.status == 1) {
+          Toast.show(res?.message, Toast.SHORT, ['RCTModalHostViewController']);
+          fn?.();
+          dispatch({type: REGISTERSUCCESS, payload: res});
+        }
       })
 
       .then(result => console.log(result))

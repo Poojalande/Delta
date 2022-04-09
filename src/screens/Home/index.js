@@ -15,6 +15,7 @@ import {useFocusEffect} from '@react-navigation/native';
 const index = ({navigation}) => {
   const dispatch = useDispatch();
   const allUserData = useSelector(state => state.state.allUserData);
+  const loading = useSelector(state => state.state.loading);
 
   const logoutHandler = () => {
     dispatch(logoutFn());
@@ -39,7 +40,12 @@ const index = ({navigation}) => {
       }}>
       {console.log('alluserdata', allUserData)}
       <SafeAreaView>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginTop: 20,
+          }}>
           <Text
             style={{
               color: 'black',
@@ -98,6 +104,7 @@ const index = ({navigation}) => {
                       fontSize: 20,
                       marginBottom: 5,
                       fontWeight: 'bold',
+                      color: 'black',
                     }}>
                     {item.user_name}
                   </Text>
@@ -105,6 +112,7 @@ const index = ({navigation}) => {
                     style={{
                       fontFamily: 'ZillaSlab-Medium',
                       fontSize: 18,
+                      color: 'black',
                     }}>
                     {item.user_email}
                   </Text>
@@ -112,6 +120,7 @@ const index = ({navigation}) => {
                     style={{
                       fontFamily: 'ZillaSlab-Medium',
                       fontSize: 18,
+                      color: 'black',
                     }}>
                     {item.user_phone_no}
                   </Text>
@@ -119,6 +128,7 @@ const index = ({navigation}) => {
                     style={{
                       fontFamily: 'ZillaSlab-Medium',
                       fontSize: 18,
+                      color: 'black',
                     }}>
                     {item.user_gender}
                   </Text>

@@ -23,16 +23,30 @@ const Register = ({navigation}) => {
   const [mobileno, setMobileno] = useState('');
 
   const [gender, setGender] = useState('');
+  const loading = useSelector(state => state.state.loading);
 
-  const [loading, setLoading] = useState(false);
-
-  const registerUser = () => {
-    dispatch(registerSuccessFun(name, username, password, mobileno, gender));
+  const successHandler = () => {
     setName('');
     setUsername('');
     setPassword('');
     setMobileno('');
     setGender('');
+
+    navigation.navigate('Login');
+  };
+
+  const registerUser = () => {
+    dispatch(
+      registerSuccessFun(
+        name,
+        username,
+        password,
+        mobileno,
+        gender,
+        successHandler,
+      ),
+    );
+    // navigation.navigate('Login');
   };
 
   return (
@@ -212,7 +226,6 @@ const Register = ({navigation}) => {
 
             <TouchableOpacity
               onPress={() => {
-                // navigation.navigate('Login');
                 registerUser();
               }}
               style={{

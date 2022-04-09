@@ -12,6 +12,12 @@ import {
   ALLUSERDATASUCCESS,
   ALLUSERDATAFAILURE,
   LOGOUT,
+  UPDATEUSERREQUEST,
+  UPDATEUSERSUCCESS,
+  UPDATEUSERFAILURE,
+  DELETEUSERREQUEST,
+  DELETEUSERSUCCESS,
+  DELETEUSERFAILURE,
 } from './type';
 
 const initialState = {
@@ -57,6 +63,39 @@ export const crudOperationReducer = (state = initialState, action) => {
         ...state,
         loading: false,
       };
+
+    case UPDATEUSERREQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case UPDATEUSERSUCCESS:
+      return {
+        ...state,
+        loading: false,
+      };
+    case UPDATEUSERFAILURE:
+      return {
+        ...state,
+        loading: false,
+      };
+
+    case DELETEUSERREQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case DELETEUSERSUCCESS:
+      return {
+        ...state,
+        loading: false,
+      };
+    case DELETEUSERFAILURE:
+      return {
+        ...state,
+        loading: false,
+      };
+
     // ALL USER DATA
     case ALLUSERDATAREQUEST:
       return {

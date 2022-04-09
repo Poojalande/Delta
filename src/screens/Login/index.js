@@ -21,8 +21,9 @@ import {loginSuccessFun} from '../../redux/action';
 const Login = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
+
   const [userInfo, setUserInfo] = useState({});
+  const loading = useSelector(state => state.state.loading);
 
   const dispatch = useDispatch();
 
