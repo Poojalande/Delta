@@ -12,8 +12,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14BF1BF1336A4CDB8CE7C52F /* ZillaSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E76E24D3A2E4EE8B366EA83 /* ZillaSlab-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-delta-deltaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-delta-deltaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		985F05CA898C45BABB3B2F64 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1176BB4EA68C486CA9E2BB36 /* Lobster-Regular.ttf */; };
+		A2346D59CC894B11A85C1F08 /* ZillaSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E2355A0784B0586608A2B /* ZillaSlab-Bold.ttf */; };
+		BD043CA54A3A49A5832713BB /* ZillaSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C35529D131B46C08ADE0AA7 /* ZillaSlab-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,7 @@
 		00E356EE1AD99517003FC87E /* deltaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deltaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* deltaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deltaTests.m; sourceTree = "<group>"; };
+		1176BB4EA68C486CA9E2BB36 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lobster-Regular.ttf"; path = "../src/assets/fonts/Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = delta/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = delta/AppDelegate.mm; sourceTree = "<group>"; };
@@ -42,7 +47,10 @@
 		5B7EB9410499542E8C5724F5 /* Pods-delta-deltaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-delta-deltaTests.debug.xcconfig"; path = "Target Support Files/Pods-delta-deltaTests/Pods-delta-deltaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-delta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-delta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = delta/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		843E2355A0784B0586608A2B /* ZillaSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ZillaSlab-Bold.ttf"; path = "../src/assets/fonts/ZillaSlab-Bold.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-delta-deltaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-delta-deltaTests.release.xcconfig"; path = "Target Support Files/Pods-delta-deltaTests/Pods-delta-deltaTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E76E24D3A2E4EE8B366EA83 /* ZillaSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ZillaSlab-Regular.ttf"; path = "../src/assets/fonts/ZillaSlab-Regular.ttf"; sourceTree = "<group>"; };
+		9C35529D131B46C08ADE0AA7 /* ZillaSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ZillaSlab-Medium.ttf"; path = "../src/assets/fonts/ZillaSlab-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -106,6 +114,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3DA2E4528A984CAF9CCCA691 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1176BB4EA68C486CA9E2BB36 /* Lobster-Regular.ttf */,
+				843E2355A0784B0586608A2B /* ZillaSlab-Bold.ttf */,
+				9C35529D131B46C08ADE0AA7 /* ZillaSlab-Medium.ttf */,
+				8E76E24D3A2E4EE8B366EA83 /* ZillaSlab-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +142,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				3DA2E4528A984CAF9CCCA691 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				985F05CA898C45BABB3B2F64 /* Lobster-Regular.ttf in Resources */,
+				A2346D59CC894B11A85C1F08 /* ZillaSlab-Bold.ttf in Resources */,
+				BD043CA54A3A49A5832713BB /* ZillaSlab-Medium.ttf in Resources */,
+				14BF1BF1336A4CDB8CE7C52F /* ZillaSlab-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
