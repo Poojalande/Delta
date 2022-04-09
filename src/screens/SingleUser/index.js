@@ -24,7 +24,7 @@ const index = ({route}) => {
       }}>
       <SafeAreaView>
         <View>
-          {route?.params?.data?.user_gender == 'male' ? (
+          {route?.params?.data?.user_gender?.toLowerCase?.() == 'male' ? (
             <Image
               style={{
                 width: 200,
